@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:galaxy/pages/cart_page.dart';
 import 'package:galaxy/pages/home_page.dart';
 import 'package:galaxy/pages/login_page.dart';
 import 'package:galaxy/utils/routes.dart';
@@ -21,14 +22,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         themeMode: ThemeMode.light,
 
-        theme: MyThemes.lightTheme(context),
-        darkTheme: MyThemes.darkTheme(context),
+        theme: MyTheme.lightTheme(context),
+        darkTheme: MyTheme.darkTheme(context),
         debugShowCheckedModeBanner: false,
       initialRoute: "/home",
       routes: {
            "/": (context) => LoginPage(),
            MyRoutes.homeRoute: (context) => HomePage(),
            MyRoutes.loginRoute: (context) => LoginPage(),
+           MyRoutes.cartRoute: (context) => CartPage(),
       },
     );
   }
